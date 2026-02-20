@@ -7,7 +7,6 @@ from code.PlayerShot import PlayerShot
 
 
 class EntityMediator:
-
     @staticmethod
     def __verify_collision_window(ent: Entity):
         if isinstance(ent, Enemy):
@@ -68,5 +67,4 @@ class EntityMediator:
             if ent.health <= 0:
                 if isinstance(ent, Enemy):
                     EntityMediator.__give_score(ent, entity_list)
-
                 entity_list.remove(ent)
